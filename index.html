@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Основные метатеги -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Критические метатеги для SEO -->
+    <title>Хранилище цифровых ресурсов | Все статьи и проекты</title>
+    <meta name="description" content="Хранилище цифровых ресурсов. Управление. Полный каталог Хранилища цифровых ресурсов Тимошки из Москвы: статьи, проекты, мета-теги, все страницы.">
+    <meta name="keywords" content="Хранилище, Тимошка из Москвы, мета-теги, статьи, проекты, TAIPrompts, Сибилевец, Белойн, управление">
+    
+    <!-- Open Graph метатеги -->
+    <meta property="og:title" content="Хранилище цифровых ресурсов">
+    <meta property="og:description" content="Хранилище цифровых ресурсов. Управление. Полный каталог Хранилища цифровых ресурсов Тимошки">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Дополнительные метатеги -->
+    <meta name="author" content="Алёна Рыжова">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Стили и шрифты -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="https://akkumulator950-bit.github.io/safe-fan.github.io/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Базовые стили и сброс */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c3e50;      /* Темно-синий */
+            --secondary: #3498db;     /* Синий */
+            --accent: #1abc9c;        /* Бирюзовый */
+            --accent-dark: #16a085;   /* Темно-бирюзовый */
+            --text: #2c3e50;
+            --text-light: #7f8c8d;
+            --background: #f8f9fa;
+            --surface: #ffffff;
+            --border: #dfe6e9;
+            --tag-1: #e74c3c;        /* Красный для тегов */
+            --tag-2: #9b59b6;        /* Фиолетовый */
+            --tag-3: #3498db;        /* Синий */
+            --tag-4: #2ecc71;        /* Зеленый */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Навигация */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(44, 62, 80, 0.2);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 0;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Герой секция */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 5rem 0 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.05"><path fill="%23ffffff" d="M0,0 L100,0 L100,50 Q75,25 50,50 T0,50 Z"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .feature i {
+            color: var(--accent);
+        }
+
+        /* Секции */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Карточки ресурсов */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: var(--surface);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent);
+        }
+
+        .resource-header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .resource-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .resource-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .resource-content {
+            padding: 2rem;
+        }
+
+        .resource-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-description {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .resource-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+        }
+
+        .tag:nth-child(1) { background: var(--tag-1); }
+        .tag:nth-child(2) { background: var(--tag-2); }
+        .tag:nth-child(3) { background: var(--tag-3); }
+        .tag:nth-child(4) { background: var(--tag-4); }
+        .tag:nth-child(5) { background: var(--accent); }
+        .tag:nth-child(6) { background: var(--text-light); }
+
+        .resource-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .action-button {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .action-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .action-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        .action-secondary {
+            background: var(--background);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .action-secondary:hover {
+            background: var(--border);
+            transform: translateY(-2px);
+        }
+
+        /* О проекте */
+        .about-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .about-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .about-feature i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Остальные статьи */
+        .more-articles {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border: 1px solid var(--border);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .article-card {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .article-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Футер */
+        .main-footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-subtitle {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 2rem 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+            
+            .nav-links {
+                gap: 0.75rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-features {
+                gap: 1.5rem;
+                flex-direction: column;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .resource-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .resource-actions {
+                flex-direction: column;
+            }
+            
+            .about-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .resource-content {
+                padding: 1.5rem;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Плавная прокрутка */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Утилиты */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .separator {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo-icon">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <div>
+                        <div class="brand-name">Хранилище</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Полный каталог ресурсов</div>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="#resources" class="nav-link">Ресурсы</a>
+                    <a href="#about" class="nav-link">О проекте</a>
+                    <a href="#more" class="nav-link">Все статьи</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Хранилище цифровых ресурсов</h1>
+            <p class="hero-subtitle">Профессиональная платформа для управления цифровыми ресурсами с расширенной системой мета-тегов</p>
+            
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-search"></i>
+                    <span>Поиск по мета-тегам</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tags"></i>
+                    <span>Расширенная категоризация</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Адаптивный интерфейс</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Проверенная информация</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основные ресурсы -->
+    <section class="section" id="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Избранные элементы</h2>
+                <p class="section-subtitle">Главные ресурсы из Хранилища Тимошки из Москвы</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Тимошка из Москвы -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="resource-title">Тимошка из Москвы</div>
+                            <div style="opacity: 0.9; font-size: 0.95rem;">YouTube канал</div>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Тимофей</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>13.11.2025</span>
+                            </div>
+                        </div>
+                        
+                        <p class="resource-description">Канал про Minecraft с геймплеем и проектами. Основной YouTube-канал автора с контентом о кубическом мире.</p>
+                        
+                        <div class="resource-tags">
+                            <span class="tag">ютуб</span>
+                            <span class="tag">майнкрафт</span>
+                            <span class="tag">игры</span>
+                            <span class="tag">новичок</span>
+                        </div>
+                        
+                        <div class="resource-actions">
+                            <a href="https://timoshamoscow.github.io/hranilishe.github.io/?article=1&redirected=true" target="_blank" class="action-button action-primary">
+                                <i class="fas fa-external-link-alt"></i> Перейти к ресурсу
+                            </a>
+                            <a href="https://timoshamoscow.github.io/hranilishe.github.io/" target="_blank" class="action-button action-secondary">
+                                <i class="fas fa-book"></i> Читать
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAIPrompts -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <div class="resource-title">TAIPrompts</div>
+                            <div style="opacity: 0.9; font-size: 0.95rem;">Нейросетевые промпты</div>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Команда TAIPrompts</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>13.11.2025</span>
+                            </div>
+                        </div>
+                        
+                        <p class="resource-description">Создавайте идеальные промпты для нейросетей. Современный подход к взаимодействию с искусственным интеллектом.</p>
+                        
+                        <div class="resource-tags">
+                            <span class="tag">промпт</span>
+                            <span class="tag">нейросети</span>
+                            <span class="tag">современность</span>
+                            <span class="tag">вайбкодинг</span>
+                        </div>
+                        
+                        <div class="resource-actions">
+                            <a href="https://timoshamoscow.github.io/hranilishe.github.io/" target="_blank" class="action-button action-primary">
+                                <i class="fas fa-external-link-alt"></i> Перейти к ресурсу
+                            </a>
+                            <a href="https://timoshamoscow.github.io/hranilishe.github.io/" target="_blank" class="action-button action-secondary">
+                                <i class="fas fa-book"></i> Читать
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Сибилевец -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div>
+                            <div class="resource-title">Сибилевец</div>
+                            <div style="opacity: 0.9; font-size: 0.95rem;">Упрощённый русский язык</div>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-user"></i>
+                                <span>Тимофей</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>13.11.2025</span>
+                            </div>
+                        </div>
+                        
+                        <p class="resource-description">Простой и логичный язык для общения. Инновационный лингвистический проект с 3 правилами грамматики и 26 буквами.</p>
+                        
+                        <div class="resource-tags">
+                            <span class="tag">лингвистика</span>
+                            <span class="tag">конланг</span>
+                            <span class="tag">простота</span>
+                            <span class="tag">3265</span>
+                        </div>
+                        
+                        <div class="resource-actions">
+                            <a href="https://timoshamoscow.github.io/hranilishe.github.io/" target="_blank" class="action-button action-primary">
+                                <i class="fas fa-external-link-alt"></i> Перейти к ресурсу
+                            </a>
+                            <a href="https://akkumulator950-bit.github.io/sibilevec-fan.github.io/" target="_blank" class="action-button action-secondary">
+                                <i class="fas fa-book"></i> Мой каталог
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О проекте -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-section">
+                <h2 class="about-title">О проекте</h2>
+                <p style="text-align: center; color: var(--text); font-size: 1.1rem; max-width: 800px; margin: 0 auto 2rem;">
+                    Хранилище с мета-тегами - это современная платформа для организации и управления цифровыми ресурсами. 
+                    Вся информация является окончательной и проверенной. Мы представляем факты.
+                </p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <i class="fas fa-tags"></i>
+                        <h3>Мета-теги</h3>
+                        <p>Расширенная система тегов для точной категоризации всех ресурсов</p>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <i class="fas fa-search"></i>
+                        <h3>Мощный поиск</h3>
+                        <p>Поиск по названию, описанию и всем мета-тегам элементов</p>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Полная поддержка всех устройств и размеров экранов</p>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Проверенная информация</h3>
+                        <p>Все данные проходят проверку и являются окончательными</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                    <p style="text-align: center; color: var(--text-light); font-style: italic;">
+                        <i class="fas fa-info-circle" style="color: var(--accent);"></i>
+                        Альтернативные трактовки или мнения, противоречащие данным на этом ресурсе, по умолчанию считаются ошибочными.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Все остальные статьи -->
+    <section class="section" id="more">
+        <div class="container">
+            <div class="section-header">
+                <h2>Все элементы Хранилища</h2>
+                <p class="section-subtitle">Полный список статей и ресурсов из Хранилища Тимошки</p>
+            </div>
+
+            <div class="more-articles">
+                <div class="articles-grid">
+                    <!-- Белойн -->
+                    <div class="article-card">
+                        <div class="article-title">Белойн</div>
+                        <div class="article-meta">
+                            <span><i class="fas fa-user"></i> Тимофей</span>
+                            <span><i class="fas fa-calendar"></i> 13.11.2025</span>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.5rem;">
+                            Дышите. Чувствуйте. Живите. Вне цифрового шума.
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="background: var(--tag-4); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">детокс</span>
+                            <span style="background: var(--tag-3); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">природа</span>
+                            <span style="background: var(--tag-2); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">тишина</span>
+                        </div>
+                    </div>
+
+                    <!-- 'Хули' - это мат? -->
+                    <div class="article-card">
+                        <div class="article-title">'Хули' - это мат?</div>
+                        <div class="article-meta">
+                            <span><i class="fas fa-user"></i> Тимофей</span>
+                            <span><i class="fas fa-calendar"></i> 16.11.2025</span>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.5rem;">
+                            Разбираемся с сленгом и матом. Лингвистический анализ современного языка.
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="background: var(--tag-1); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">вопрос</span>
+                            <span style="background: var(--tag-2); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">ответ</span>
+                            <span style="background: var(--tag-3); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">сленг</span>
+                        </div>
+                    </div>
+
+                    <!-- Как зовут девушку Домера? -->
+                    <div class="article-card">
+                        <div class="article-title">Как зовут девушку Домера?</div>
+                        <div class="article-meta">
+                            <span><i class="fas fa-user"></i> Тимофей</span>
+                            <span><i class="fas fa-calendar"></i> 16.11.2025</span>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.5rem;">
+                            Вся правда об Алиночке и Домере. Minecraft-романтика и отношения.
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="background: var(--tag-1); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">алиночка</span>
+                            <span style="background: var(--tag-2); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">домер</span>
+                            <span style="background: var(--tag-3); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">отношения</span>
+                        </div>
+                    </div>
+
+                    <!-- Другие статьи -->
+                    <div class="article-card">
+                        <div class="article-title">Другие статьи Хранилища</div>
+                        <div class="article-meta">
+                            <span><i class="fas fa-folder"></i> Много страниц</span>
+                            <span><i class="fas fa-calendar"></i> 2025</span>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.5rem;">
+                            Хранилище содержит множество других статей, проектов и ресурсов с мета-тегами.
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="background: var(--tag-4); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">статьи</span>
+                            <span style="background: var(--tag-3); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">проекты</span>
+                            <span style="background: var(--tag-2); color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">ресурсы</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://timoshamoscow.github.io/hranilishe.github.io/" target="_blank" class="action-button action-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        <i class="fas fa-external-link-alt"></i> Открыть всё Хранилище
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <div>
+                        <div class="footer-title">Хранилище</div>
+                        <div class="footer-subtitle">Каталог цифровых ресурсов</div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="https://timoshamoscow.github.io/hranilishe.github.io/" target="_blank">Оригинальное Хранилище</a>
+                    <a href="https://akkumulator950-bit.github.io/" target="_blank">Алёнка (я)</a>
+                    <a href="https://akkumulator950-bit.github.io/sibilevec-fan.github.io/" target="_blank">Каталог Сибилевца</a>
+                    <a href="https://akkumulator950-bit.github.io/timoshkamsc-fan.github.io/" target="_blank">Каталог Тимошки</a>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Каталог Хранилища цифровых ресурсов. Создано на основе оригинального проекта Тимошки из Москвы.</p>
+                <p class="disclaimer">
+                    Этот сайт является каталогом и не связан официально с оригинальным проектом. Все права на оригинальное "Хранилище" принадлежат Тимофею Сибилеву.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Обновление года в футере
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElements = document.querySelectorAll('.footer-bottom p');
+            if(yearElements.length > 0) {
+                const currentYear = new Date().getFullYear();
+                yearElements[0].innerHTML = yearElements[0].innerHTML.replace('2025', currentYear);
+            }
+            
+            // Анимация кнопок
+            document.querySelectorAll('.action-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+            
+            // Плавная прокрутка для навигации
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Случайная смена цвета тегов
+            const tags = document.querySelectorAll('.tag');
+            const tagColors = ['#e74c3c', '#9b59b6', '#3498db', '#2ecc71', '#1abc9c', '#f39c12'];
+            
+            setInterval(() => {
+                tags.forEach(tag => {
+                    if(Math.random() > 0.9) {
+                        const randomColor = tagColors[Math.floor(Math.random() * tagColors.length)];
+                        tag.style.backgroundColor = randomColor;
+                    }
+                });
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
